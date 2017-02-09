@@ -14,6 +14,8 @@
 }
 #kalk_form_cont h1 {line-height: 1;}
 
+#kalk_form {margin-bottom: 30px;}
+
 #kalk_form_cont table {
     width: 75%;
     border: 0 !important;
@@ -142,4 +144,32 @@
 
 .kalk_form_send_contacts-title {
 	padding: 30px 5% 30px;
+}
+
+@media screen and (max-width: 1030px) {
+	#kalk_form_cont {width: 100%;}
+	#kalk_form_cont table {width: auto;}
+}
+
+@media screen and (max-width: 768px) {
+	#kalk_form_cont table#kalk_form_results {width: 96%;}
+	.kalk_form_send_contacts {width: 96%;}
+}
+
+@media screen and (max-width: 480px) {
+	#kalk_form_cont table td select {font-size: 120%;}
+	.kalk_form_send_contacts .formbutton {font-size: 16px;}
+}
+
+@media screen and (max-width: 430px) {
+	#kalk_form_cont table td select {font-size: 100%;}
+}
+
+@media screen and (max-width: 400px) {
+	.formbutton {font-size: 150%;}
+}
+
+@media screen and (max-width: 360px) {
+	#kalk_form_cont table td select {font-size: 80%;}
+	.formbutton_kalk {font-size: 160%;}
 }
