@@ -97,9 +97,12 @@ $('#kalk_form').submit(function() {
 			  $("#calc_conts_send_plintus").val(data['plintus']);
 			  $("#calc_conts_send_sum").val(data['sum']);
 			  $('#kalk_form_results .kalk_form_results_sum').text(data['remontPrice'] + ' рублей');
-			  $('#kalk_form').hide(200);
+			  //$('#kalk_form').hide(200);
 			  $('#kalk_form_results').show(300);
 			  $('.kalk_form_send_contacts_cont').show(300);
+			  $('html, body').animate({
+			  	scrollTop: $('.formbutton_kalk_cont').offset().top
+			  }, 500);
           },
           error:  function(xhr, status, error) {
 			  var err = eval("(" + xhr.responseText + ")");
@@ -107,7 +110,7 @@ $('#kalk_form').submit(function() {
 				$('#kalk_form_results').hide();
 				$('#kalk_form_results .kalk_form_results_sum').text('');
 				$('.kalk_form_send_contacts_cont').hide();
-				$('#kalk_form').show(300);
+				//$('#kalk_form').show(300);
 			  }
 		  }
         });  
